@@ -1,7 +1,7 @@
 .header {
-  display: flex;
+  border: 1px solid #000;
   justify-content: space-between;
-  border: 1px solid black;
+  display: flex;
 }
 
 .logo {
@@ -10,29 +10,29 @@
 
 .nav-items > ul {
   font-size: 24px;
-  display: flex;
   list-style-type: none;
+  display: flex;
 }
 
 .nav-items > ul > li {
-  padding: 10px;
   margin: 10px;
+  padding: 10px;
 }
 
 .res-container {
-  display: flex;
   flex-wrap: wrap;
+  display: flex;
 }
 
 .res-card {
+  width: 200px;
   margin: 5px;
   padding: 5px;
-  width: 200px;
 }
 
 .res-card:hover {
   cursor: pointer;
-  border: 1px solid black;
+  border: 1px solid #000;
 }
 
 .search {
@@ -45,19 +45,21 @@
 }
 
 .filter-btn {
-  margin: 10px;
   cursor: pointer;
+  margin: 10px;
 }
 
 .login {
-  padding: 0 20px;
   cursor: pointer;
+  padding: 0 20px;
 }
 
 .filter {
   display: flex;
 }
+
 .user-card {
+  border: 1px solid #000;
   padding: 10px;
-  border: 1px solid black;
 }
+/*# sourceMappingURL=index.9e4c6fd2.css.map */
