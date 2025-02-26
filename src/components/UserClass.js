@@ -11,3 +11,5 @@ class UserClass extends React.Component {
     );
   }
 }
+
+export default UserClass;
