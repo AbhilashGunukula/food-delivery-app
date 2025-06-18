@@ -1,23 +1,10 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { MENU_API } from "../utils/constants";
+import useRestaurantMenu from "../utils/useRestaurantMenu";
 
 const RestaurantMenu = () => {
-  const [resInfo, setResInfo] = useState(null);
   const { resID } = useParams();
 
-  useEffect(() => {
-    fetchMenu();
-  }, []);
-
-  const fetchMenu = async () => {
-    const data = await fetch(MENU_API + resID);
-    const json = await data.json();
-
-    console.log(json);
-    console.log("im here");
-    setResInfo(json.data);
-  };
+  const resInfo = useRestaurantMenu(resID);
 
   if (resInfo === null) {
     return <h1>Loading...</h1>;
@@ -33,8 +20,6 @@ const RestaurantMenu = () => {
   const { itemCards } =
     resInfo?.cards?.[4].groupedCard?.cardGroupMap?.REGULAR?.cards?.[3].card
       ?.card || {};
-
-  console.log(itemCards);
 
   return (
     <div className="Menu">
